@@ -1,0 +1,186 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4; /* Light grey background */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #ff0000; /* Red for the main heading */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #000000; /* Black for subheadings */
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: #ff0000; /* Red for product and supplier names */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Form Styles */
+form {
+  background-color: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #ff0000; /* Red color for buttons */
+  color: white;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:active {
+  background-color: #cc0000; /* Darker red when pressed */
+}
+
+/* Flexbox for Side-by-Side Forms */
+.forms-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 30px;
+}
+
+.form-container {
+  flex: 1;
+  padding: 0 15px;
+  max-width: 48%;
+}
+
+/* Product and Supplier List Styles */
+.product-list, .supplier-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 30px;
+}
+
+.product-card, .supplier-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 220px;
+  text-align: center;
+  margin: 10px;
+  transition: transform 0.2s ease;
+}
+
+.product-card p, .supplier-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.product-card .btn-update {
+  background-color: #ff0000; /* Red color for buttons */
+  color: white;
+  border: none;
+  padding: 8px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.product-card .btn-update:active {
+  background-color: #cc0000; /* Darker red when pressed */
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .forms-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-container {
+    max-width: 90%;
+  }
+
+  .product-list, .supplier-list {
+    justify-content: center;
+  }
+
+  .product-card, .supplier-card {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .product-list, .supplier-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card, .supplier-card {
+    max-width: 90%;
+  }
+
+  button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
